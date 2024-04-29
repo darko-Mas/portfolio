@@ -1,0 +1,631 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes fadeInEducationBefore {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes fadeInEducation {
+    from {
+        scale: 1;
+        opacity: 1; 
+    }
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes typing2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cover {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #222b25, #141414);
+    align-items: center;
+}
+
+.navbar {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: 30px;
+    z-index: 9999;
+    width: 100%;
+    animation: fadeIn 1s ease-in; /* Apply the animation with 1 second duration */
+}
+
+.navbar ul {
+    margin: 0 20%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 15px;
+    background-color: #7e7e7e46;
+    border-radius: 50px;
+    border: 1px solid rgb(180, 172, 17);
+}
+
+.navbar ul li {
+    width: 25%;
+}
+
+.navbar ul li a {
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar ul li a:hover {
+    background-color:  #a8843098;
+    transition: 0.3s;
+}
+
+.nameRow {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.nameRow .coverImg {
+    position: relative;
+    z-index: 99;
+}
+.nameRow .coverImg img {
+    height: 350px; 
+    margin-right: 50px;
+    margin-bottom: 40%;
+}
+
+.nameRow .name {
+    width: 50%;
+    display: flex;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.nameRow .name > div {
+    margin: auto;
+}
+
+.name .textName {
+    position: relative;
+    z-index: 299;
+    right: -70px;
+    bottom: -40px;
+}
+
+.nameRow .name h2 {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    overflow: hidden; 
+    animation: typing 2s steps(30, end) forwards;
+    display: flex;
+    font-size: 62px;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 3px 3px 0px rgb(0, 0, 0);
+}
+
+.nameRow .industri {
+    color: white;
+    padding-left: 50px;
+    border-left: 2px solid rgb(180, 172, 17) ;
+    width: 50%;
+}
+
+.nameRow .industri h1 {
+    font-size: 48px;
+    overflow: hidden;
+    animation: typing 2s steps(30, end) forwards;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-shadow: 3px 3px 0px rgb(0, 0, 0); /* Adjust the values as needed */
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #1b1b1b;
+    height: 0;
+}
+
+.contact .contactLeft {
+    margin: 0 15px;
+    height: 30vh;
+    width: 70vh;
+    background: linear-gradient(135deg, #412828a7, #a88430a7, #214334a7) ;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #412828, #a88430, #214334) 1;
+    top: -15vh;
+    bottom: -15vh;
+    text-align: center;
+}
+
+
+.contact .contactLeft p{
+    margin-top: 7.5vh;
+    font-size: 20px;
+}
+
+.contact .contactRight {
+    margin: 0 ;
+    margin-left: 15px;
+    height: 30vh;
+    width: 70vh;
+    background: linear-gradient(135deg, #412828a7, #a88430a7, #214334a7) ;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #412828, #a88430, #214334) 1;
+    top: -15vh;
+    bottom: -15vh;
+    text-align: center;
+}
+
+.contact .contactRight p{
+    margin-top: 7.5vh;
+    font-size: 20px;
+}
+
+.education {
+    min-height: 100vh;
+    padding: 10%;
+    padding-bottom: 5%;
+    display: block;
+    justify-content: center;
+    background-color: #1b1b1b;
+    align-items: center;
+    color: white;
+}
+
+.education h1 {
+    animation: fadeIn 1s ease-in;
+    text-align: center;
+    font-size: 42px;
+}
+
+.education .row {
+    display: flex;
+    padding-top: 50px ;
+}
+
+.education .row .col1::before,.education .row .col2::before{    
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    animation: fadeInEducationBefore linear;
+    animation-timeline: view(500px 0px);
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(135deg, #412828, #a88430, #214334) 1;}
+
+
+.education .row .col1, .education .row .col2{
+    animation: fadeIn 1s forwards;
+    width: 50%;
+    padding:0px 30px 20px 30px;
+}
+
+.education .row > div h1{
+    text-align: left;
+}
+
+.education .row .col1 h1, .education .row .col2 h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.education .row .col1 h2, .education .row .col2 h2{
+    margin: 0;
+    color: #aeaeae;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.education .row .col2 a{
+    margin: 0;
+    color: #aeaeae;
+}
+
+.education .row .skills {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.education .row .skills ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.education .row .skills ul li img{
+    height: 50px;
+}
+
+.expirience {
+    min-height: 120vh;
+    justify-content: center;
+    background: linear-gradient(to top, #222b25, #141414);
+    align-items: center;
+}
+
+.expirience h1 {
+    text-align: center;
+    color: white;
+    padding:  100px 0 0px 0;
+    margin: 0;
+    font-size: 42px;
+}
+
+.expirience .row {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: 5%;
+    width: 90%;
+    border-bottom: 1px solid rgb(180, 172, 17);
+    margin-bottom: 50px;
+}
+
+.expirience .row .col-4 {
+    width: 33.33%;
+    height: 70vh;
+    text-align: center;
+    background-color: #7e7e7e;
+    transition: width 0.3s, height 0.5s, background-color 0.5s;
+}
+
+.expirience .row .col-4 h1{
+    padding-top: 70px;
+    font-size: 28px;
+}
+
+.back{
+    background-color: #141414c7;
+    height: 100%;
+    width: 100%;
+}
+
+.expirience .inellipse {
+    background-image: url('./img/pexels-neo-853421-2653362.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.expirience .JAWork {
+    background-image: url('./img/pexels-markusspiske-4439901.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.expirience .JAInteship {
+    background-image: url('./img/pexels-negativespace-34600.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.expirience .row .col-4 h1{
+    text-transform: capitalize;
+}
+
+
+.expirience .row .col-4 p {
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.expirience .row .col-4 p a{
+    text-decoration: none;
+    color: white;
+    text-align: left;
+}
+
+.expirience .row .col-4:hover {
+    width: 60%;
+    text-align: center;
+    background-color: #7e7e7ec3;
+    transition: width 0.3s, height 2s, background-color 0.5s;
+}
+
+.expirience .row .col-4:hover p {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.expirience .row .col-4:hover .back {
+    background-color: #141414ed;
+}
+
+#three-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .nameRow {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .cover {
+        height: 100%;
+    }
+
+    .nameRow {
+        display: block;
+    }
+
+    .nameRow .name {
+        margin-top: 50px;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .nameRow .coverImg {
+        margin-left: 0!important;
+    }
+
+    .nameRow .industri {
+        width: 80vw;
+        margin-left: 15vw;
+        margin-right: 3vw;
+        padding: 1vh;
+        margin-bottom: 300px;
+    }
+
+    .expirience {
+        min-height: 150vh;
+    }
+
+    .expirience .row .col-4 {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .contact {
+        display: block;
+        height: 50vh;
+        justify-content: center;
+    }
+
+    .contact .contactLeft {
+        margin: auto;
+        position: relative;
+        top: -30vh;
+        bottom: -20vh;
+    }
+
+    .contact .contactRight {
+        margin: auto;
+        position: relative;
+        top: -20vh;
+        bottom: -10vh;
+    }
+
+    .expirience .row .col-4 {
+        height: 110vh;
+    }
+
+    .expirience .row .col-4 p {
+        padding: 10px;
+        font-size: 14px;
+        
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .nameRow .coverImg img {
+        height: 300px; 
+    }
+
+    .nameRow .name h2 {
+        font-size: 42px;        
+    }
+
+    .nameRow .industri h1 {
+        font-size: 38px;
+    }
+
+    .nameRow .industri p {
+        font-size: 14px;
+    }
+
+    .education .row {
+        display: block;
+    }
+
+    .education .row .col1, .education .row .col2{
+        width: 100%;
+        padding-right: 50px;
+    }
+
+    .education .row .skills ul{
+        display: flex;
+        flex-wrap: wrap; 
+    }
+
+    .education .row .skills ul{
+        padding-left: 0;
+    }
+
+    .education .row .skills ul li img{
+        height: 30px;
+    }
+
+    .expirience .row {
+        display: block;
+    }
+
+    .expirience .row .col-4 {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .expirience .row .col-4:hover {
+        width: 100%;
+    }
+
+    #three-container {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .navbar{
+        right: -3px;
+    }
+
+    .navbar ul {
+        margin: 0;
+        width: 90%;
+    }
+
+    .navbar ul li a {
+        padding: 5px 10px;
+        margin: 5px 0;
+    }
+
+    .nameRow {
+        width: 100%;
+    }
+
+    .nameRow .name{
+        margin-top: 100px;
+    }
+
+    .name .textName {
+        right: -40px;
+        bottom: -20px;
+    }    
+
+    .nameRow .coverImg img {
+        height: 200px;
+        margin-right: 0;
+    }
+
+    .nameRow .industri {
+        margin-left: 9vw;
+        margin-bottom: 170px;
+    }
+
+    .contact .contactLeft {
+        margin: 0 15px;
+        height: 20vh;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .contact .contactLeft h1{
+        font-size: 18px;
+    }
+
+    .contact .contactLeft p{
+        margin-top: 3.5vh;
+        font-size: 14px;
+    }
+
+    .contact .contactLeft {
+        top: -10vh;
+        bottom: 0vh;
+    }
+
+    .contact .contactRight {
+        margin: 0 15px;
+        height: 20vh;
+        width: 80%;
+        margin-left: 10%;
+        top: 0vh;
+    }
+
+    .contact .contactRight h1{
+        font-size: 18px;
+    }
+
+    .contact .contactRight p{
+        margin-top: 3.5vh;
+        font-size: 14px;
+    }
+
+    .education .row .col1, .education .row .col2{
+        width: 80%;
+    }
+
+    .expirience {
+        padding-bottom: 50px;
+    }
+
+    .expirience .row {
+        margin-bottom: 0px;
+    }
+
+    .expirience .row .col-4 h1 {
+        padding-top: 25px;
+    }
+
+}
+
+
+
+
