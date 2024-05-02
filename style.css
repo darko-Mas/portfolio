@@ -324,7 +324,7 @@ body, html {
 }
 
 .expirience .row .col-4 h1{
-    padding-top: 70px;
+    padding-top: 40px;
     font-size: 28px;
 }
 
@@ -358,7 +358,7 @@ body, html {
 
 
 .expirience .row .col-4 p {
-    padding: 20px;
+    padding: 10px;
     opacity: 0;
     transition: opacity 0.5s;
     color: white;
@@ -387,6 +387,11 @@ body, html {
 
 .expirience .row .col-4:hover .back {
     background-color: #141414ed;
+}
+
+.projects{
+    padding-top: 50px;
+
 }
 
 #three-container {
@@ -441,6 +446,21 @@ body, html {
 }
 
 @media screen and (max-width: 885px) {
+
+    .navbar{
+        right: -20px;
+    }
+
+    .navbar ul {
+        margin: 0;
+        width: 90%;
+    }
+
+    .navbar ul li a {
+        padding: 5px 10px;
+        margin: 5px 0;
+    }
+
     .contact {
         display: block;
         height: 50vh;
@@ -472,7 +492,26 @@ body, html {
     }
 }
 
+
 @media screen and (max-width: 550px) {
+
+    .navbar{
+        right: -10px;
+    }
+
+    .navbar ul {
+        margin: 0;
+        width: 90%;
+    }
+
+    .navbar ul li a {
+        padding: 5px 10px;
+        margin: 5px 0;
+    }
+
+    .nameRow {
+        width: 100%;
+    }
 
     .nameRow .coverImg img {
         height: 300px; 
@@ -495,7 +534,7 @@ body, html {
     }
 
     .education .row .col1, .education .row .col2{
-        width: 100%;
+        width: 90%;
         padding-right: 50px;
     }
 
@@ -525,13 +564,25 @@ body, html {
         width: 100%;
     }
 
+    .expirience {
+        padding-bottom: 50px;
+    }
+
+    .expirience .row {
+        margin-bottom: 0px;
+    }
+
+    .expirience .row .col-4 h1 {
+        padding-top: 25px;
+    }
+
     #three-container {
         display: none;
     }
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 
     .navbar{
         right: -3px;
